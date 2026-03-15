@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Jasmine M. Dania - UX/Product Designer. Creating intuitive, inclusive digital experiences across healthcare, government tech, social impact, and agriculture.">
+    <meta name="theme-color" content="#0a1628">
+    <title>Jasmine M. Dania | UX/Product Designer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- ============================================
+         NAVIGATION BAR
+         ============================================
+         
+         WHAT THIS DOES:
+         The <nav> is semantic HTML that tells screen readers
+         this is navigation. The sticky position keeps it
+         visible as you scroll (better UX).
+         
+         The hamburger menu (<button class="menu-toggle">)
+         appears on mobile and toggles the navigation open/close.
+    -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">
+                <span class="logo-mark">◆</span> Jasmine Dania
+            </a>
+            
+            <!-- Mobile menu toggle button -->
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <!-- Main navigation menu -->
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#work" class="nav-link">Work</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="/resume.pdf" class="nav-link nav-resume">Resume</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ============================================
+         HERO SECTION
+         ============================================
+         
+         WHAT THIS DOES:
+         The hero section is the first thing visitors see.
+         It establishes your value proposition immediately
+         with a clear headline and supporting text.
+         
+         WHY THIS WORKS:
+         - Large heading (52px) draws attention (VISUAL HIERARCHY)
+         - Supporting text explains what you do
+         - Buttons with clear CTAs (Call To Action)
+         - Gradient background adds visual interest without clutter
+    -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1 class="hero-title">I design products people trust</h1>
+            <p class="hero-subtitle">
+                I'm a Product & UX Designer creating intuitive, inclusive digital experiences 
+                across healthcare, government tech, social impact, and agriculture. 
+                Driven by user research and a commitment to balancing user needs with business goals.
+            </p>
+            <div class="hero-cta">
+                <a href="#work" class="btn btn-primary">View My Work</a>
+                <a href="#contact" class="btn btn-secondary">Let's Talk</a>
+            </div>
+        </div>
+        <!-- Decorative element for visual interest -->
+        <div class="hero-accent"></div>
+    </section>
+
+    <!-- ============================================
+         WORK SECTION: Featured Projects
+         ============================================
+         
+         WHAT THIS DOES:
+         This section showcases your 4 best projects
+         in a responsive grid layout.
+         
+         WHY THIS STRUCTURE:
+         - Each project is an <article> (semantic HTML)
+         - Images, meta info, and description are grouped
+         - Clicking "Read Case Study" opens a modal with details
+         - Grid is responsive: 3 cols on desktop, 2 on tablet, 1 on mobile
+    -->
+    <section class="work-section" id="work">
+        <div class="container">
+            <div class="section-header">
+                <h2>Featured Work</h2>
+                <p>4 case studies. Each one a lesson in understanding users and solving real problems.</p>
+            </div>
+
+            <!-- PROJECT GRID: Horizontal card layout -->
+            <div class="projects-grid">
+                
+                <!-- PROJECT 1: 532 Group Website Redesign -->
+                <article class="project-card" data-category="government-tech">
+                    <div class="project-image">
+                        <!-- PLACEHOLDER: Replace with actual project image when ready -->
+                        <div class="image-placeholder" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                            <span>532 Group Website</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-meta">
+                            <span class="project-category">Government Tech</span>
+                            <span class="project-duration">8 months</span>
+                        </div>
+                        <h3 class="project-title">532 Group Website Redesign</h3>
+                        <p class="project-description">
+                            Helping a government contractor strengthen their digital presence to win their first prime contract. 
+                            Researched stakeholder needs and designed a website that balances credibility, storytelling, and user experience.
+                        </p>
+                        <div class="project-metrics">
+                            <div class="metric">
+                                <strong>20+</strong>
+                                <span>Stakeholder interviews</span>
+                            </div>
+                            <div class="metric">
+                                <strong>3</strong>
+                                <span>Key user personas</span>
+                            </div>
+                        </div>
+                        <a href="#case-study-532" class="project-link" data-modal="case-study-532">
+                            Read Full Case Study →
+                        </a>
+                    </div>
+                </article>
+
+                <!-- PROJECT 2: WeUp CMS -->
+                <article class="project-card" data-category="social-impact-tech">
+                    <div class="project-image">
+                        <div class="image-placeholder" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                            <span>WeUp CMS Platform</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-meta">
+                            <span class="project-category">Social Impact Tech</span>
+                            <span class="project-duration">5 months</span>
+                        </div>
+                        <h3 class="project-title">WeUp CMS</h3>
+                        <p class="project-description">
+                            Designed an internal content management system for a gamified goal-tracking platform. 
+                            Built with security, cross-team collaboration, and WeUp's playful personality in mind.
+                        </p>
+                        <div class="project-metrics">
+                            <div class="metric">
+                                <strong>7</strong>
+                                <span>Team members across 4 depts</span>
+                            </div>
+                            <div class="metric">
+                                <strong>15+</strong>
+                                <span>User interviews & surveys</span>
+                            </div>
+                        </div>
+                        <a href="#case-study-weup" class="project-link" data-modal="case-study-weup">
+                            Read Full Case Study →
+                        </a>
+                    </div>
+                </article>
+
+                <!-- PROJECT 3: Culture Creativ Website -->
+                <article class="project-card" data-category="branding">
+                    <div class="project-image">
+                        <div class="image-placeholder" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                            <span>Culture Creativ Website</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-meta">
+                            <span class="project-category">Agency Website</span>
+                            <span class="project-duration">6 months</span>
+                        </div>
+                        <h3 class="project-title">Culture Creativ</h3>
+                        <p class="project-description">
+                            Transformed a single-page website into a cohesive 5-page digital platform that communicates 
+                            the agency's services, showcases community partnerships, and reflects the founder's personal brand.
+                        </p>
+                        <div class="project-metrics">
+                            <div class="metric">
+                                <strong>5</strong>
+                                <span>Page redesign</span>
+                            </div>
+                            <div class="metric">
+                                <strong>2</strong>
+                                <span>Cohesive brand experiences</span>
+                            </div>
+                        </div>
+                        <a href="#case-study-culture" class="project-link" data-modal="case-study-culture">
+                            Read Full Case Study →
+                        </a>
+                    </div>
+                </article>
+
+                <!-- PROJECT 4: Cubeseed -->
+                <article class="project-card" data-category="agriculture-tech">
+                    <div class="project-image">
+                        <div class="image-placeholder" style="background: linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%);">
+                            <span>Cubeseed Platform</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-meta">
+                            <span class="project-category">Agriculture Tech</span>
+                            <span class="project-duration">7 months</span>
+                        </div>
+                        <h3 class="project-title">Cubeseed</h3>
+                        <p class="project-description">
+                            Designed a platform connecting Nigerian farmers with agricultural suppliers. Focused on understanding 
+                            trust-based transaction models and creating a system that works within existing cultural business practices.
+                        </p>
+                        <div class="project-metrics">
+                            <div class="metric">
+                                <strong>40+</strong>
+                                <span>Farmer interviews</span>
+                            </div>
+                            <div class="metric">
+                                <strong>15+</strong>
+                                <span>Supplier interviews</span>
+                            </div>
+                        </div>
+                        <a href="#case-study-cubeseed" class="project-link" data-modal="case-study-cubeseed">
+                            Read Full Case Study →
+                        </a>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         CASE STUDY MODALS
+         ============================================
+         
+         WHAT THIS DOES:
+         Each project has a detailed case study in a modal.
+         Users click "Read Case Study" and a modal pops up
+         with full details without leaving the page.
+         
+         WHY MODALS:
+         - Keep user context (they don't go to a new page)
+         - Can close with X button or ESC key
+         - Works on all screen sizes
+         - Feels professional and responsive
+    -->
+
+    <!-- CASE STUDY 1: 532 Group -->
+    <div class="case-study-modal" id="case-study-532">
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Close case study">×</button>
+            
+            <div class="case-study-header">
+                <h2>532 Group Website Redesign</h2>
+                <p class="case-study-meta">Government Tech • Nov 2023 - July 2024 • UX Designer, Visual Designer, Copywriter, Strategy</p>
+            </div>
+
+            <div class="case-study-body">
+                
+                <!-- THE PROBLEM -->
+                <section class="case-section">
+                    <h3>The Problem</h3>
+                    <p>
+                        532 Group is a digital solutions provider serving federal agencies like the Department of Veterans Affairs 
+                        and Medicaid. While they were already delivering essential services—Digital Services, Data Science, Cybersecurity, 
+                        and Operations Management—their digital presence fell short of communicating their brand identity and value.
+                    </p>
+                    <p>
+                        The challenge was steep: they needed a website that could inspire confidence in prime contractors, strengthen 
+                        relationships with government agencies, and attract top talent. To achieve their next major milestone—winning their 
+                        first prime government contract—they needed a digital presence that reflected their scale and professionalism.
+                    </p>
+                </section>
+
+                <!-- RESEARCH & INSIGHTS -->
+                <section class="case-section">
+                    <h3>Research & Insights</h3>
+                    <p>
+                        I conducted in-depth user research with three key stakeholder groups: prime contractors evaluating subcontractors, 
+                        government agencies seeking digital solutions, and potential employees considering job opportunities.
+                    </p>
+                    <ul class="insights-list">
+                        <li><strong>Government agencies</strong> wanted to see certifications, socioeconomic status, and contract vehicles prominently displayed above the fold—this information was critical for evaluating 532 Group's credibility and qualifications.</li>
+                        <li><strong>Prime contractors</strong> expressed interest in testimonials and customer reviews to gauge the company's track record and expertise.</li>
+                        <li><strong>Job seekers</strong> valued information on career growth opportunities, success stories of past projects, and a flexible work environment to assess cultural fit.</li>
+                    </ul>
+                </section>
+
+                <!-- DESIGN SOLUTION -->
+                <section class="case-section">
+                    <h3>Design Solution</h3>
+                    <p>
+                        Armed with research insights, I worked closely with our visual designer and copywriter to craft low and high-fidelity 
+                        wireframes that balanced modern, professional aesthetics with user-friendly functionality. The wireframes served as 
+                        the blueprint for design iterations informed by client feedback.
+                    </p>
+                    <p>
+                        The new structure prioritized user needs: government certifications and contract vehicles prominently featured, 
+                        client testimonials building credibility, and a dedicated careers section highlighting growth opportunities and 
+                        company culture.
+                    </p>
+                </section>
+
+                <!-- BEFORE/AFTER -->
+                <section class="case-section">
+                    <h3>Before & After</h3>
+                    <div class="media-gallery">
+                        <div class="before-after">
+                            <div class="before">
+                                <h4>Before</h4>
+                                <!-- PLACEHOLDER: Replace with before screenshot -->
+                                <div class="placeholder-image" style="background: #f3f4f6;">
+                                    Before: Original website with unclear messaging
+                                </div>
+                            </div>
+                            <div class="after">
+                                <h4>After</h4>
+                                <!-- PLACEHOLDER: Replace with after screenshot -->
+                                <div class="placeholder-image" style="background: #e0f2fe;">
+                                    After: Redesigned website with clear value prop
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- PROTOTYPE/VIDEO: Add when ready -->
+                        <div class="prototype-video">
+                            <h4>Design Walkthrough</h4>
+                            <div class="video-placeholder">
+                                <p>Screenshots or prototype video coming soon</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- LEARNINGS & REFLECTION -->
+                <section class="case-section">
+                    <h3>Key Learnings</h3>
+                    <ul class="learnings-list">
+                        <li><strong>User Advocacy is Critical, but Balance is Key:</strong> Our research showed users wanted government certifications and career growth information prioritized. The client chose a different direction. This taught me how to advocate for user needs while remaining flexible and responsive to business goals.</li>
+                        <li><strong>Cross-Functional Collaboration:</strong> Working with a visual designer and copywriter reinforced that great design comes from diverse perspectives. Each team member brought unique insights that strengthened the final product.</li>
+                        <li><strong>Adapting to Client Decisions:</strong> Even when final outcomes shift from original proposals, it's crucial to keep communication open and ensure the design process remains positive and productive.</li>
+                    </ul>
+                </section>
+
+                <!-- LIVE LINKS -->
+                <div class="case-actions">
+                    <p style="color: var(--color-secondary); font-size: 14px;">Live link available upon request</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CASE STUDY 2: WeUp CMS -->
+    <div class="case-study-modal" id="case-study-weup">
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Close case study">×</button>
+            
+            <div class="case-study-header">
+                <h2>WeUp CMS</h2>
+                <p class="case-study-meta">Social Impact Tech • 5 months • 7 UX/UI Designers</p>
+            </div>
+
+            <div class="case-study-body">
+                
+                <section class="case-section">
+                    <h3>The Problem</h3>
+                    <p>
+                        At WeUp, people don't just set goals; they dare themselves to achieve them. The platform is rooted in social good, 
+                        parody, and gamified accountability—helping individuals and organizations transform personal and ESG goals into 
+                        real-world impact.
+                    </p>
+                    <p>
+                        While the player-facing platform was vibrant and engaging, the internal staff lacked a streamlined, user-friendly 
+                        system to manage growing operations and content. The challenge: design a Content Management System (CMS) that is 
+                        both intuitive for first-time users and powerful enough to support multiple departments. And critically, it couldn't 
+                        be just another admin dashboard—it needed to carry WeUp's bold, playful energy while remaining practical and secure.
+                    </p>
+                </section>
+
+                <section class="case-section">
+                    <h3>Research & Insights</h3>
+                    <p>
+                        I led the synthesis of survey and interview findings, organizing responses into an affinity map to identify patterns 
+                        across departments.
+                    </p>
+                    <ul class="insights-list">
+                        <li><strong>Collaboration was paramount:</strong> Teams emphasized seamless communication across departments. They wanted a CMS that didn't just store content but fostered cross-functional alignment.</li>
+                        <li><strong>Cybersecurity concerns were universal:</strong> Beyond the cybersecurity team, all departments prioritized platform security, especially around content permissions and user roles.</li>
+                        <li><strong>Simplicity was crucial:</strong> Employees wanted intuitive, minimal-training platforms. Many noted that current internal systems felt outdated or overly complex.</li>
+                        <li><strong>Personality matters:</strong> In true WeUp fashion, employees expressed excitement about gamified and fun design elements. They wanted a tool reflecting the company's playful, purpose-driven energy.</li>
+                    </ul>
+                </section>
+
+                <section class="case-section">
+                    <h3>Design Solution</h3>
+                    <p>
+                        Grounded in employee workflows and research insights, I led the design of a custom internal CMS that transformed 
+                        fragmented processes into a cohesive tool. Key features included:
+                    </p>
+                    <ul class="insights-list">
+                        <li>Secure login experience aligned with cybersecurity best practices</li>
+                        <li>Streamlined payment history interface for viewing transactions and downloading records</li>
+                        <li>Cross-team visibility tools strengthening departmental communication</li>
+                        <li>Playful, gamified design elements reflecting WeUp's brand identity</li>
+                        <li>Role-based access control maintaining security protocols</li>
+                    </ul>
+                </section>
+
+                <section class="case-section">
+                    <h3>Before & After</h3>
+                    <div class="media-gallery">
+                        <div class="before-after">
+                            <div class="before">
+                                <h4>Before</h4>
+                                <div class="placeholder-image" style="background: #f3f4f6;">
+                                    Before: Fragmented internal systems
+                                </div>
+                            </div>
+                            <div class="after">
+                                <h4>After</h4>
+                                <div class="placeholder-image" style="background: #fecaca;">
+                                    After: Unified, playful CMS platform
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="prototype-video">
+                            <h4>Prototype Walkthrough</h4>
+                            <div class="video-placeholder">
+                                <p>Figma prototype or walkthrough video coming soon</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="case-section">
+                    <h3>Key Learnings</h3>
+                    <ul class="learnings-list">
+                        <li><strong>Feedback Shapes Better Outcomes:</strong> Early and frequent feedback from stakeholders built trust and shaped solutions that actually worked for users.</li>
+                        <li><strong>Deadline Pressure Teaches Prioritization:</strong> Under tight deadlines, I learned to stay composed, ruthlessly prioritize, and focus on progress over perfection.</li>
+                        <li><strong>Real-World Design is Flexible:</strong> The design process rarely follows an idealized path. Being open to iteration and willing to pivot was key to moving projects forward successfully.</li>
+                    </ul>
+                </section>
+
+                <div class="case-actions">
+                    <p style="color: var(--color-secondary); font-size: 14px;">Live link available upon request</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CASE STUDY 3: Culture Creativ -->
+    <div class="case-study-modal" id="case-study-culture">
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Close case study">×</button>
+            
+            <div class="case-study-header">
+                <h2>Culture Creativ</h2>
+                <p class="case-study-meta">Agency Website Redesign • 6 months • UX Designer, Visual Designer</p>
+            </div>
+
+            <div class="case-study-body">
+                
+                <section class="case-section">
+                    <h3>The Problem</h3>
+                    <p>
+                        Culture Creativ had built a strong reputation through community activations and partnerships with athletes and entertainers. 
+                        However, their digital presence did not reflect the depth of their work.
+                    </p>
+                    <p>
+                        Two specific issues: Kelli Haywood's personal website no longer represented her evolving professional identity, and 
+                        the Culture Creativ website was just a single landing page. This severely limited the agency's ability to communicate 
+                        services, showcase past initiatives, and convert interested visitors into clients.
+                    </p>
+                    <p>
+                        The challenge was to transform both websites into strategic digital platforms that could communicate the brand story, 
+                        establish credibility, and support business growth.
+                    </p>
+                </section>
+
+                <section class="case-section">
+                    <h3>Research & Insights</h3>
+                    <ul class="insights-list">
+                        <li><strong>Services needed clarity:</strong> Visitors couldn't easily understand what Culture Creativ offered or how they helped clients launch initiatives.</li>
+                        <li><strong>Storytelling was central:</strong> Community initiatives and athlete partnerships required proper space to showcase projects and impact.</li>
+                        <li><strong>Brand cohesion mattered:</strong> Both websites needed to feel connected while serving different purposes: personal leadership and agency services.</li>
+                    </ul>
+                </section>
+
+                <section class="case-section">
+                    <h3>Design Solution</h3>
+                    <p>
+                        I restructured the information architecture to expand Culture Creativ from a single landing page into a five-page 
+                        experience that clearly explains services, highlights past initiatives, and guides potential clients toward inquiry.
+                    </p>
+                    <p>
+                        In parallel, Kelli Haywood's personal website was refreshed to reflect her evolving professional identity. The design 
+                        balances expressive visual elements with professional tone, creating cohesion between founder and agency.
+                    </p>
+                </section>
+
+                <section class="case-section">
+                    <h3>Before & After</h3>
+                    <div class="media-gallery">
+                        <div class="before-after">
+                            <div class="before">
+                                <h4>Before</h4>
+                                <div class="placeholder-image" style="background: #f3f4f6;">
+                                    Before: Single-page landing
+                                </div>
+                            </div>
+                            <div class="after">
+                                <h4>After</h4>
+                                <div class="placeholder-image" style="background: #ddd6fe;">
+                                    After: Five-page platform with storytelling
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="prototype-video">
+                            <h4>Design Walkthrough</h4>
+                            <div class="video-placeholder">
+                                <p>Website walkthrough coming soon</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="case-section">
+                    <h3>Key Learnings</h3>
+                    <ul class="learnings-list">
+                        <li><strong>Information Architecture Powers Storytelling:</strong> Clear IA and intuitive navigation helped communicate the agency's vision and connect with potential collaborators.</li>
+                        <li><strong>Simplicity Builds Trust:</strong> By focusing on strong messaging and avoiding clutter, we created experiences where visitors could quickly understand and engage with the brand.</li>
+                    </ul>
+                </section>
+
+                <div class="case-actions">
+                    <a href="https://www.culturecreativ.com/" class="btn btn-primary" target="_blank">
+                        View Live Website ↗
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CASE STUDY 4: Cubeseed -->
+    <div class="case-study-modal" id="case-study-cubeseed">
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Close case study">×</button>
+            
+            <div class="case-study-header">
+                <h2>Cubeseed</h2>
+                <p class="case-study-meta">Agriculture Technology • 7 months • 5 UX/UI Designers, 1 PM, 1 Developer</p>
+            </div>
+
+            <div class="case-study-body">
+                
+                <section class="case-section">
+                    <h3>The Problem</h3>
+                    <p>
+                        Smallholder farmers in Nigeria often struggle to identify reliable suppliers for essential agricultural inputs—feed, 
+                        seeds, equipment. Many transactions happen through informal networks or intermediaries, leading to inflated prices, 
+                        low-quality products, or fraudulent suppliers.
+                    </p>
+                    <p>
+                        At the same time, legitimate input producers face difficulty reaching new customers and presenting products credibly. 
+                        Traditional e-commerce marketplaces rely on integrated payment systems, but many agricultural communities operate on 
+                        trust-based workflows where payments occur after negotiation, delivery, or offline verification.
+                    </p>
+                    <p>
+                        The challenge: design a platform enabling suppliers and farmers to connect, communicate, and coordinate transactions 
+                        while respecting existing trust-based business practices.
+                    </p>
+                </section>
+
+                <section class="case-section">
+                    <h3>Research & Insights</h3>
+                    <p>
+                        Through extensive user research—40+ farmer interviews and 15+ supplier interviews—we discovered a critical insight: 
+                        many agricultural transactions in Nigeria don't follow formal e-commerce models at all.
+                    </p>
+                    <ul class="insights-list">
+                        <li><strong>Trust-based workflows are the norm:</strong> Farmers and suppliers rely heavily on relationship-driven transactions: requesting quotes, negotiating terms, confirming delivery, and settling payments offline.</li>
+                        <li><strong>Formal e-commerce doesn't fit:</strong> Attempting to replicate traditional online marketplace models with integrated payments would misalign with how producers actually conduct business.</li>
+                        <li><strong>Transparency and organization improve existing systems:</strong> Rather than replacing the trust model, we could enhance it by making supplier discovery and communication more structured and transparent.</li>
+                    </ul>
+                </section>
+
+                <section class="case-section">
+                    <h3>Design Solution</h3>
+                    <p>
+                        I designed the Input Producer Portal—a web-based platform allowing agricultural suppliers to showcase products, 
+                        receive quote requests from farmers, and coordinate transactions through structured communication workflows.
+                    </p>
+                    <p>
+                        Rather than functioning as a traditional e-commerce marketplace, the platform supports existing procurement by enabling producers to:
+                    </p>
+                    <ul class="insights-list">
+                        <li>Create verified product listings with pricing and minimum order quantities</li>
+                        <li>Receive quote requests from farmers</li>
+                        <li>Send invoices or purchase orders</li>
+                        <li>Coordinate delivery and confirm payment outside the platform</li>
+                    </ul>
+                    <p>
+                        This approach maintains the trust-driven nature of agricultural transactions while introducing transparency and 
+                        organization into the procurement process.
+                    </p>
+                </section>
+
+                <section class="case-section">
+                    <h3>Before & After</h3>
+                    <div class="media-gallery">
+                        <div class="before-after">
+                            <div class="before">
+                                <h4>Before</h4>
+                                <div class="placeholder-image" style="background: #f3f4f6;">
+                                    Before: Informal, fragmented supply networks
+                                </div>
+                            </div>
+                            <div class="after">
+                                <h4>After</h4>
+                                <div class="placeholder-image" style="background: #bbf7d0;">
+                                    After: Structured, trust-based marketplace
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="prototype-video">
+                            <h4>Platform Walkthrough</h4>
+                            <div class="video-placeholder">
+                                <p>Prototype or platform walkthrough coming soon</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="case-section">
+                    <h3>Key Learnings</h3>
+                    <ul class="learnings-list">
+                        <li><strong>Competitive Analysis Matters:</strong> I would have spent more time identifying and analyzing additional competitors to strengthen strategic positioning.</li>
+                        <li><strong>Refine Research Questions:</strong> I would have validated and iterated on user interview questions to ensure we were extracting the most actionable insights.</li>
+                        <li><strong>Design for Trust, Not Just Features:</strong> This project deepened my understanding of designing for trust, building MVPs with clear focus, and making intentional trade-offs. Success meant understanding cultural context, not just user needs.</li>
+                    </ul>
+                </section>
+
+                <div class="case-actions">
+                    <p style="color: var(--color-secondary); font-size: 14px;">Live link available upon request</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================
+         ABOUT SECTION
+         ============================================
+         
+         WHAT THIS DOES:
+         Tells your story, shows your personality,
+         and builds connection with the hiring manager.
+         
+         WHY THIS STRUCTURE:
+         - Bio on the left (text-heavy)
+         - Image placeholder on the right (visual balance)
+         - Skills organized by category below
+         - Together it creates a "meet the designer" moment
+    -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-content">
+                    <h2>About Me</h2>
+                    <p>
+                        Hi, I'm Jasmine — a Product & UX Designer based in New Haven, CT, with a passion for creating digital 
+                        experiences that are intuitive, inclusive, and genuinely human.
+                    </p>
+                    <p>
+                        My path into design is a little unconventional, and I think that's what makes my perspective unique. Before 
+                        transitioning into UX, I spent years working as a phlebotomist, showing up for 60–80 patients a day in high-stakes 
+                        healthcare settings. That experience taught me how to listen, how to read a room, and how to communicate clearly 
+                        under pressure — skills I now bring directly into my design process.
+                    </p>
+                    <p>
+                        Since earning my UI/UX Design Certification from Springboard, I've had the opportunity to design across a wide 
+                        range of industries, from healthcare and government to startups and branding agencies. Whether I'm leading a team, 
+                        conducting user research, or crafting wireframes in Figma, I lead with curiosity and keep the user at the center 
+                        of every decision.
+                    </p>
+                    <p>
+                        I believe great design is a win-win when users are understood and valued, and businesses thrive. That balance 
+                        between user needs and business goals is where I do my best work.
+                    </p>
+
+                    <!-- SKILLS SECTION: Organized by category -->
+                    <div class="skills-grid">
+                        <div class="skill-category">
+                            <h4>Design Tools</h4>
+                            <ul>
+                                <li>Figma</li>
+                                <li>Figjam</li>
+                                <li>Miro</li>
+                                <li>Photoshop</li>
+                                <li>Canva</li>
+                                <li>Webflow</li>
+                            </ul>
+                        </div>
+                        <div class="skill-category">
+                            <h4>Research & Methods</h4>
+                            <ul>
+                                <li>User Research</li>
+                                <li>User Interviews</li>
+                                <li>Affinity Mapping</li>
+                                <li>Usability Testing</li>
+                                <li>Survey Design</li>
+                                <li>Competitive Analysis</li>
+                            </ul>
+                        </div>
+                        <div class="skill-category">
+                            <h4>Design Expertise</h4>
+                            <ul>
+                                <li>Product Design</li>
+                                <li>UX/UI Design</li>
+                                <li>Website Design</li>
+                                <li>CMS Design</li>
+                                <li>Information Architecture</li>
+                                <li>Accessibility Standards</li>
+                            </ul>
+                        </div>
+                        <div class="skill-category">
+                            <h4>Industries</h4>
+                            <ul>
+                                <li>Government Tech</li>
+                                <li>Social Impact</li>
+                                <li>Agriculture Tech</li>
+                                <li>Healthcare</li>
+                                <li>Branding & Agency</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ABOUT IMAGE: Placeholder for headshot -->
+                <div class="about-image">
+                    <!-- PLACEHOLDER: Replace with your headshot -->
+                    <div class="image-placeholder" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 16px; aspect-ratio: 1;">
+                        Your Photo
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         CONTACT SECTION: Icon-Based Design
+         ============================================
+         
+         WHAT THIS DOES:
+         Icon-based contact methods matching Jasmine's design.
+         Clean, professional, easy to navigate.
+    -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <div class="contact-content">
+                <h2>Let's Connect</h2>
+                <p>I'm available for full-time or strategic design projects. Reach out if you're looking for a designer who values clarity, systems thinking, business needs, and user-centered solutions.</p>
+                
+                <!-- CONTACT METHODS: Icon-based grid -->
+                <div class="contact-methods-grid">
+                    <div class="contact-method">
+                        <div class="contact-icon">✉</div>
+                        <h4>Email</h4>
+                        <a href="mailto:jasminemdania@gmail.com">jasminemdania@gmail.com</a>
+                    </div>
+                    
+                    <div class="contact-method">
+                        <div class="contact-icon">in</div>
+                        <h4>LinkedIn</h4>
+                        <a href="https://www.linkedin.com/in/jasmine-dania/" target="_blank">linkedin.com/in/jasmine-dania</a>
+                    </div>
+                    
+                    <div class="contact-method">
+                        <div class="contact-icon">📍</div>
+                        <h4>Location</h4>
+                        <p>New Haven, CT</p>
+                    </div>
+                </div>
+
+                <p class="contact-note">
+                    Currently open for opportunities • Available to start immediately
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         FOOTER
+         ============================================
+         
+         WHAT THIS DOES:
+         Provides navigation, additional links,
+         and copyright information at the bottom.
+    -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Jasmine M. Dania. All rights reserved.</p>
+            <p>Designed and built with thoughtful code</p>
+        </div>
+    </footer>
+
+    <!-- ============================================
+         MODAL OVERLAY
+         ============================================
+         
+         WHAT THIS DOES:
+         When a case study modal opens, this overlay
+         darkens the background. Clicking it closes the modal.
+         This provides visual feedback and helps focus
+         attention on the modal content.
+    -->
+    <div class="modal-overlay" id="modalOverlay"></div>
+
+    <!-- ============================================
+         JAVASCRIPT
+         ============================================
+         
+         The script.js file handles:
+         - Mobile menu toggle
+         - Case study modal open/close
+         - Keyboard shortcuts (ESC to close)
+         - Smooth scrolling
+         - Click handlers
+         
+         See script.js for detailed explanations.
+    -->
+    <scr
